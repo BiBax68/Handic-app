@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos – Handic’App</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="index.html" class="logo">Handic’App</a>
+        <nav>
+            <a href="index.html" class="active">Accueil</a>
+            <a href="fonctionnalites.html">Fonctionnalités</a>
+            <a href="maquettes.html">Maquettes</a>
+            <a href="temoignages.html">Témoignages</a>
+            <a href="a-propos.html">À propos</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <button class="burger" id="burger" aria-label="Ouvrir le menu">
+            &#9776;
+        </button>
+    </div>
+    <section class="about-section">
+        <h1>Pourquoi Handic’App&nbsp;?</h1>
+        <p>
+            Handic’App est née d’un constat simple : trop peu de solutions existent pour faciliter les sorties des
+            personnes en situation de handicap.<br>
+            Nous avons créé cette application pour ouvrir l’espace public à tous, favoriser les rencontres et mettre en
+            avant les lieux véritablement accessibles.
+        </p>
+        <div class="about-mission">
+            <h2>Notre mission&nbsp;:</h2>
+            <ul>
+                <li>Encourager l’autonomie</li>
+                <li>Rendre visible l’accessibilité réelle</li>
+                <li>Créer du lien social</li>
+            </ul>
+        </div>
+        <div class="about-valeurs">
+            <div class="about-valeur">Inclusion</div>
+            <div class="about-valeur">Transparence</div>
+            <div class="about-valeur">Bienveillance</div>
+            <div class="about-valeur">Action</div>
+        </div>
+    </section>
+    <script>
+        // Burger menu mobile
+        const burger = document.getElementById('burger');
+        const nav = document.querySelector('.navbar nav');
+        burger.addEventListener('click', () => nav.classList.toggle('open'));
+        window.addEventListener('click', (e) => {
+            if (!nav.contains(e.target) && !burger.contains(e.target)) {
+                nav.classList.remove('open');
+                burger.setAttribute('aria-expanded', 'false');
+            }
+        });
+    </script>
+</body>
+
+</html>
